@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--
+/*
+ * Drag and Drop Exercise
+ * -=-=-=-=-=-=-=-=-=-=-=
+ * Authored by: Chris Russell, Imagineeringart.com, Inc. 2014
+ * Copyright (C) Pearson Education, 2014
+ * 
+ * This code may not be given, sold, or disclosed to any third parties without the written permission of Pearson Education.
+ */-->
+	<title>Drag and Drop</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/reset.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/jquery-ui-1.11.0.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/pso_widget_base.js"></script>
+</head>
+<body>
+<div aria-label="Drag and Drop" role="complementary">
+
+	<div id="instructions" class="screen_readers_only" tabindex="0">
+		<h2>Keyboard Instructions</h2>
+		<p id="in1">Drag variables from the repository to the numerator and denominator to define the equation for the estimated time that reserves will remain.</p>
+		<p id="in2">If mouse drag and drop functionality is unavailable, press tab or shift+tab on your keyboard to select the variables.</p>
+		<p id="in3">Press spacebar or enter or control+M to pick up the variable.</p>
+		<p id="in4">Press tab or shift+tab or arrow keys to move the focus to the target locations.</p>
+		<p id="in5">Press spacebar or enter or control+M to drop the variable or use the escape key to cancel.</p>
+	</div>
+	<div id="drag_and_drop_exercise">
+		<div id="equationContainer">
+			<p id="equationLeft">Estimated time that reserves will remain</p>
+			<p id="equationEquals">=</p>
+			<div id="equationRight" aria-live="polite">
+				<div id="equationTop" aria-label="numerator" aria-describedby="in5" class="targetClear" aria-dropeffect="move"></div>
+				<hr id="equationLine" />
+				<div id="equationBottom" aria-label="denominator" aria-describedby="in5" class="targetClear" aria-dropeffect="move"></div>
+			</div>
+		</div>
+		<div id="dragContainer" aria-live="polite">
+			<div id="dragHolder1" aria-label="repository" aria-describedby="in5" class="targetClear" aria-dropeffect="move">
+				<div id="dragReserves" aria-label="draggable variable Reserves" aria-describedby="in3" class="dragOff" tabindex="0" aria-grabbed="false" onfocus="focusStart(event, this)" onblur="focusEnd(event, this)" onclick="dragClick(event, this)">Reserves</div>
+			</div>
+			<div id="dragHolder2" aria-label="repository" aria-describedby="in5" class="targetClear" aria-dropeffect="move">
+				<div id="dragProduction" aria-label="draggable variable Production" aria-describedby="in3" class="dragOff" tabindex="0" aria-grabbed="false" onfocus="focusStart(event, this)" onblur="focusEnd(event, this)" onclick="dragClick(event, this)">Production</div>
+			</div>
+			<div id="dragHolder3" aria-label="repository" aria-describedby="in5" class="targetClear" aria-dropeffect="move">
+				<div id="dragConsumption" aria-label="draggable variable Consumption" aria-describedby="in3" class="dragOff" tabindex="0" aria-grabbed="false" onfocus="focusStart(event, this)" onblur="focusEnd(event, this)" onclick="dragClick(event, this)">Consumption</div>
+			</div>
+		</div>
+		<button id="buttonCheck" type="button" onclick="checkEq()">Check your equation</button>
+		<p id="feedbackContainer" aria-label="feedback" aria-live="polite"></p>
+	</div>
+
+	<script src="js/main.min.js"></script>
+
+</div>	
+</body>
+</html>

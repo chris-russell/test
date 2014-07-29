@@ -1,0 +1,229 @@
+/*
+ * Drag and Drop Exercise
+ * -=-=-=-=-=-=-=-=-=-=-=
+ * Authored by: Chris Russell, Imagineeringart.com, Inc. 2014
+ * Copyright (C) Pearson Education, 2014
+ * 
+ * This code may not be given, sold, or disclosed to any third parties without the written permission of Pearson Education.
+ */
+html {
+	height: 100%;
+	font-size: 100%;
+}
+body {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 1em;
+	line-height: 1.1em;
+	padding: 2%;
+	color: #444444;
+	max-width: 1024px;
+}
+@media (min-width: 700px) {
+	body { font-size: 1.3em; }
+}
+@media (max-width: 699px) and (min-width: 551px) {
+	body { font-size: 1.15em; }
+}
+@media (max-width: 550px) and (min-width: 401px) {
+	body { font-size: 0.9em; }
+}
+@media (max-width: 400px) {
+	body { font-size: 0.8em; }
+}
+p, legend {
+	margin: 0.1em 0 0.1em 0;
+}
+select:focus, table:focus, input:focus { 
+	outline: 2px solid rgb(169,203,241);
+}
+
+#drag_and_drop_exercise {
+	position: relative;
+	display: inline-block;
+	left: 5%;
+	width: 80%;
+	max-width: 600px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#equationContainer {
+	position:relative;
+	top:0em;
+	left:0em;
+	clear:both;
+	height:6em;
+	margin:1em 0em;
+}
+
+#equationLeft {
+	position:absolute;
+	top:1.75em;
+	left:0em;
+	float:left;
+	width:10em;
+}
+
+#equationEquals {
+	position:absolute;
+	top:2.25em;
+	left:10.5em;
+	float:left;
+	width:1em;
+}
+
+#equationRight {
+	position:absolute;
+	top:0em;
+	left:12em;
+	float:left;
+	width:12em;
+}
+
+#equationTop {
+	position: absolute;
+	top:0em;
+	left:0em;
+	width:12em;
+	height:2em;
+	background:#eeeeee;
+	border-radius:0.5em;
+}
+
+#equationLine {
+	position: absolute;
+	top:2.2em;
+	left:0em;
+	width:12.25em;
+	height:0.15em;
+	margin:0.5em 0em; 
+	background:#bbbbbb;
+	border:0;
+}
+
+#equationBottom {
+	position: absolute;
+	top:3.4em;
+	left:0em;
+	width:12em;
+	height:2em;
+	background:#eeeeee;
+	border-radius:0.5em;
+}
+
+#dragContainer {
+	position:relative;
+	top:0em;
+	left:0em;
+	clear:both;
+	height:6em;
+	width:25em;
+	background:#eeeeee;
+	padding:0.5em;
+	margin-top:1em;
+}
+
+#dragHolder1 {
+	position:absolute;
+	top:0.5em;
+	left:6.75em;
+	width:12em;
+	height:2em;
+	background:#dddddd;
+	border-radius:0.5em;
+}
+
+#dragHolder2 {
+	position:absolute;
+	top:3em;
+	left:0.5em;
+	width:12em;
+	height:2em;
+	background:#dddddd;
+	border-radius:0.5em;
+}
+
+#dragHolder3 {
+	position:absolute;
+	top:3em;
+	left:13.5em;
+	width:12em;
+	height:2em;
+	background:#dddddd;
+	border-radius:0.5em;
+}
+
+.targetHighlight {
+	border:0.15em solid #ddaa00;
+}
+
+.targetClear {
+	border:0.15em solid #dddddd;
+}
+
+#dragReserves, #dragProduction, #dragConsumption {
+	-ms-touch-action:none;
+	position:absolute;
+	top:0em;
+	left:0em;
+	margin-top:-0.15em;
+	margin-left:-0.15em;
+	width:12em;
+	height:1.6em;
+	border:0.15em solid #dddddd;
+	padding-top:0.4em; 
+	border-radius:0.5em;
+	text-align:center;
+	cursor:move;
+}
+
+.dragOff {
+	background:#ffffff;
+}
+
+.dragFocused {
+	background:#d1e3f8;
+}
+
+.dragMove {
+	background:#a9cbf1;
+	z-index:100;
+}
+
+#buttonCheck {
+	clear:both;
+	margin:1em 0em;
+	width:12em;
+	height:2em;
+	border:0.15em solid #eeeeee;
+	background:#eeeeee;
+	border-radius:0.5em;
+	text-align:center;
+	font-size:100%;
+	cursor:pointer;
+}
+
+#feedbackContainer {
+	clear:both;
+	margin-top:1em;
+}
+
+i {
+	font-style:italic;
+}
+
+h2 {
+	font-weight:bold;
+}
+
+.screen_readers_only {
+    position: absolute;	
+	top: 0;
+	left: -2000px;
+	max-width: 1000px;
+	z-index: 1;
+}

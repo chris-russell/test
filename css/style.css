@@ -18,17 +18,29 @@ body {
 	color: #444444;
 	max-width: 1024px;
 }
-@media (min-width: 700px) {
-	body { font-size: 1.3em; }
+@media (min-width: 751px) {
+	body { font-size: 1.5em; }
 }
-@media (max-width: 699px) and (min-width: 551px) {
-	body { font-size: 1.15em; }
+@media (max-width: 750px) and (min-width: 571px) {
+	body { font-size: 1.2em; }
 }
-@media (max-width: 550px) and (min-width: 401px) {
+@media (max-width: 570px) and (min-width: 481px) {
+	body { font-size: 1em; }
+}
+@media (max-width: 480px) and (min-width: 421px) {
 	body { font-size: 0.9em; }
 }
-@media (max-width: 400px) {
+@media (max-width: 420px) and (min-width: 371px) {
 	body { font-size: 0.8em; }
+}
+@media (max-width: 370px) and (min-width: 321px) {
+	body { font-size: 0.7em; }
+}
+@media (max-width: 320px) and (min-width: 281px) {
+	body { font-size: 0.6em; }
+}
+@media (max-width: 280px) {
+	body { font-size: 0.5em; }
 }
 p, legend {
 	margin: 0.1em 0 0.1em 0;
@@ -41,8 +53,9 @@ select:focus, table:focus, input:focus {
 	position: relative;
 	display: inline-block;
 	left: 5%;
-	width: 80%;
-	max-width: 600px;
+	width:95%;
+	max-width: 800px;
+	overflow:hidden;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -121,7 +134,7 @@ select:focus, table:focus, input:focus {
 	left:0em;
 	clear:both;
 	height:6em;
-	width:25em;
+	width:25.5em;
 	background:#eeeeee;
 	padding:0.5em;
 	margin-top:1em;
@@ -197,7 +210,7 @@ select:focus, table:focus, input:focus {
 #buttonCheck {
 	clear:both;
 	margin:1em 0em;
-	width:12em;
+	width:13em;
 	height:2em;
 	border:0.15em solid #eeeeee;
 	background:#eeeeee;
